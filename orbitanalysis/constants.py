@@ -4,7 +4,8 @@ constants.py
 These are physical constants that are used throughout the orbitalAnalysis package. 
 
 All of the following values are given in SI units, and are obtained from current acceptable astrodynamics references. 
-Gravitational discrepancies like J2 oblateness are neglected in order to keep the program simple. 
+Gravitational discrepancies like J2 oblateness are neglected in order to keep the program simple. Additionally 
+drag, and perturbations due to a third body are neglected as well.
 """
 
 # Earth's gravitational parameter (mu) in m^3/s^2 also (mu = G * M_earth)
