@@ -1,0 +1,14 @@
+ [build-system]
+ requires = ["hatchling >= 1.26"]
+ build-backend = "hatchling.build"
+ 
+ [project]
+ name = "orbitAnalysis"
+ version = "0.1.0"
+ description = "Chemical (Impulse) vs EP (low-thrust) orbit transfer tool."
+ readme = "README.md"
+ requires-python = ">=3.10"
+ dependencies = ["numpy","matplotlib"]
+
+ [project.scripts]
+ orbitAnalysis = "orbitanalysis.cli:main"
