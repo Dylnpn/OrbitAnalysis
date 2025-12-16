@@ -170,13 +170,16 @@ where $f(\mathbf{x})$ represents the state derivative function.
 ---
 ### Convergence Verification
 
-A numerical convergence is verified using **time-step refinement**, which redcues the $\Delta t$ until changes in
+A numerical convergence is verified using **time-step refinement**, which reduces the $\Delta t$ until changes in the followin are negligible:
 - Final orbital radius
 - Total propellant spent
-are negligible, ensuring the numerical error doesn't affect the propulsion trade. Two plots are produced to ensure convergence:
+
+This ensures the numerical error doesn't affect the propulsion trade. Two plots are produced to ensure convergence:
     1. TOF error vs time step
     2. Prop used error vs time step
+    
 These plots show error convergence towards zero as the time step decreases (finer calculations).
+
 
 ---
 
@@ -207,7 +210,7 @@ orbitAnalysis --h1-km <#> --h2-km <#> --inc1-deg <#> --inc2-deg <#> --t-days <#>
 -----------------------------------------------------------------
 Example 1:
 orbitAnalysis --h1-km 200 --h2-km 300 --inc1-deg 30 --inc2-deg 32 --t-days 40 --m0-kg 1000 --ep-thrust 40 --ep-isp 1600 --dt 1
---> Should return EP YES Feeaisble
+--> Should return EP YES Feasible
 -----------------------------------------------------------------
 Example 2: 
 orbitAnalysis --h1-km 200 --h2-km 700 --inc1-deg 30 --inc2-deg 40 --t-days 4 --m0-kg 1000 --ep-thrust 2 --ep-isp 160 --dt 1
