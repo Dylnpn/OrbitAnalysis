@@ -89,7 +89,7 @@ def chemicalVsEP(h1,h2,inc1,inc2,tlim,m0,epThrust,epIsp,ep_dt = 10,):
     # If EP is NOT feasible, chemical is recommended by default
     if not ep.feasible:
         recommendation = "Chemical Propulsion"
-        reason = ("EP case is NOT feasible given the thrust and time constraints."
+        reason = ("EP case is NOT feasible given the thrust and time constraints.\n" 
         "Recommendation: Impulsive chemical transfer as a baseline.")
     else:
         # EP YES Feasible: compare propellant uused vs the equivalent of chemical.
@@ -102,7 +102,7 @@ def chemicalVsEP(h1,h2,inc1,inc2,tlim,m0,epThrust,epIsp,ep_dt = 10,):
         reason = ("EP case YES feasible and minimizes the propellant mass compared to a "
         "chemical propulsion system. However, this comes at the cost of longer transfer time.")
 
-        return TradeResults(recommendation = recommendation, reason = reason,
+    return TradeResults(recommendation = recommendation, reason = reason,
                             
                             chemDeltVtotal=chem.dvTotal,
                             chemTOF = chem.TOF,
@@ -114,5 +114,5 @@ def chemicalVsEP(h1,h2,inc1,inc2,tlim,m0,epThrust,epIsp,ep_dt = 10,):
                             epTOF = ep.TOF,
                             epPropSpent = ep.propSpent,
                             epDeltV = ep.DeltV
-        )
+    )
 

@@ -83,7 +83,7 @@ def main(argv=None):
     print("Electric Propulsiion (Low-Thrust):")
     print(f"    Feasible: {res.epFeasible}")
     print(f"    Message: {res.epMessage}")
-    print(f"    TOF Used: {res.epTOF/86400:.2f} days")
+    print(f"    TOF: {res.epTOF/3600:.3f} hr")
     print(f"    Propellant Spent: {res.epPropSpent:.3f} kg")
     print(f"    Total Delta V: {res.epDeltV:.2f} m/s\n")
 

@@ -189,11 +189,11 @@ def lowThrustTransferSim(h1, h2, inc1, inc2, tlim, m0, thrust, isp, dt, mu=MU_EA
     if a_n_needed0 > aTotal0:
         return LowThrustResult(feasible = False, message=(
             "NOT FEASIBLE (Inclination): The required normal acceleration exceeds" \
-            "the vailable thrust/mass at the start. To avoid this do either of the following:" \
-            "   1). Increase Thrust" \
-            "   2). Increase allowed time" \
-            "   3). Reduce inclination change" \
-            "   4). Reduce mass." 
+            "the vailable thrust/mass at the start. To avoid this do either of the following:\n" \
+            "       1). Increase Thrust \n" 
+            "       2). Increase allowed time\n" \
+            "       3). Reduce inclination change\n" \
+            "       4). Reduce mass.\n" 
             ),
             TOF = 0.0,
             DeltV = 0,

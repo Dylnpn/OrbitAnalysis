@@ -63,7 +63,6 @@ def main():
     TICK_FONTSIZE = 10
     GRID_ALPHA_MAJOR = 0.6
     GRID_ALPHA_MINOR = 0.3
-    
 
     # -------------------------------
     # PLOT 1: TOF Error vs dt
