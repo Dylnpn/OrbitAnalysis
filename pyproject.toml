@@ -11,4 +11,8 @@
  dependencies = ["numpy","matplotlib"]
 
  [project.scripts]
- orbitAnalysis = "orbitanalysis.cli:main"
+ orbitAnalysis = "orbitalanalysis.cli:main"
+
+ [tool.hatch.build.targets.wheel]
+ packages = ["orbitalanalysis"]
+

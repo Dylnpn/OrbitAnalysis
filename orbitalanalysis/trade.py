@@ -99,7 +99,7 @@ def chemicalVsEP(h1,h2,inc1,inc2,tlim,m0,epThrust,epIsp,ep_dt = 10,):
         # propellant as a general rule of thumb, but this comes at the cost of time. EP is recommends if YES
         # feasible and prop is low. 
         recommendation = "Electric Propulsion"
-        reason = ("EP case YES feasible and minimizes the propellant mass compared to a"
+        reason = ("EP case YES feasible and minimizes the propellant mass compared to a "
         "chemical propulsion system. However, this comes at the cost of longer transfer time.")
 
         return TradeResults(recommendation = recommendation, reason = reason,
