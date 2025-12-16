@@ -6,8 +6,8 @@
 
 ## Overview
 The software allows the user to enter an initial and final orbit, inclination change, and desired transfer time. This software does the folloing:
-- Computes an analytical chemical baseline that includes a Hohmann + plane chnage transfer.
-- Simulates low-thrust electric propulsion (EP) trasnfer numerically.
+- Computes an analytical chemical baseline that includes a Hohmann + plane change transfer.
+- Simulates low-thrust electric propulsion (EP) transfer numerically.
 - Evaluates feasibility for the EP case.
 - Makes recommendation for a propulsion system to be used based on propellant efficiency. 
 
@@ -15,12 +15,12 @@ The software allows the user to enter an initial and final orbit, inclination ch
 
 ## Features
 
-- Checmical Hohmann transfer with inclination change.
+- Chemical Hohmann transfer with inclination change.
 - Low-thrust EP dynamics using a fixed-step RK4 integrator.
 - Event stopping simulation at target for EP.
 - Trade study and recommendation logic for propulsion system.
 - Command-line interface (CLI).
-- Step-size convergence verification
+- Step-size convergence verification.
 - Parametric trade sweep that plots propellant over time.
 
 ---
@@ -170,10 +170,19 @@ where $f(\mathbf{x})$ represents the state derivative function.
 ---
 ### Convergence Verification
 
-A numerical convergence is verified use **time-step refinement**, which redcues the $\Delta t$ until changes in
+A numerical convergence is verified using **time-step refinement**, which redcues the $\Delta t$ until changes in
 - Final orbital radius
 - Total propellant spent
-are negligible, ensuring the numerical error doesn't affect the propulsion trade.
+are negligible, ensuring the numerical error doesn't affect the propulsion trade. Two plots are produced to ensure convergence:
+    1. TOF error vs time step
+    2. Prop used error vs time step
+These plots show error convergence towards zero as the time step decreases (finer calculations).
+
+---
+
+### Sweep Trade Analysis
+
+A Trade sweep is performed, comparing propellant used and allowed time for specified orbital altitude and inclination changes. The parameters to be analyzed must be manually chnaged in the "trade_sweep.py" file. 
 
 ---
 
